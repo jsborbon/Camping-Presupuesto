@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Camping</title>
+    <link rel="stylesheet" href="Css/styles.css">
+    <script src="Js/script.js"></script>
+</head>
+<body>
+<section>
+    <table>
+        <thead>
+        <tr>
+            <th>Incluir</th>
+            <th>Concepto</th>
+            <th></th>
+            <th>Alta</th>
+            <th>Baja</th>
+            <th>Cantidad</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="concepto">
+            <td><input type="checkbox" id="incluirPersona" name="incluirPersona" onclick="habilitar(this)"></td>
+            <td>Persona</td>
+            <td><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Person_icon_BLACK-01.svg/962px-Person_icon_BLACK-01.svg.png"
+                    alt="persona Icono" title="persona Icono"></td>
+            <td class="alta">7.15 €</td>
+            <td class="baja">5.75 €</td>
+            <td><input type="number" id="cantidadPersona" name="cantidadPersona" min="1" value="1" disabled></td>
+        </tr>
+        <tr class="concepto">
+            <td><input type="checkbox" id="incluirNino" name="incluirNino" onclick="habilitar(this)"></td>
+            <td>Niño</td>
+            <td><img src="https://bikila.com/img/caracteristicas/genero_junior.png" alt="niño Icono" title="niño Icono">
+            </td>
+            <td class="alta">4.1 €</td>
+            <td class="baja">3.5 €</td>
+            <td><input type="number" id="cantidadNino" name="cantidadNino" min="1" value="1" disabled></td>
+        </tr>
+        <tr class="concepto">
+            <td><input type="checkbox" id="incluirCoche" name="incluirCoche" onclick="habilitar(this)"></td>
+            <td>Coche</td>
+            <td><img src="https://image.shutterstock.com/image-vector/car-icon-vector-symbol-on-260nw-1721339608.jpg"
+                     alt="Coche Icono" title="Coche Icono"></td>
+            <td class="alta">7.25 €</td>
+            <td class="baja">5.75 €</td>
+            <td><input type="number" id="cantidadCoche" name="cantidadCoche" min="1" value="1" disabled></td>
+        </tr>
+        <tr class="concepto">
+            <td><input type="checkbox" id="incluirCaravana" name="incluirCaravana" onclick="habilitar(this)"></td>
+            <td>Caravana</td>
+            <td><img src="https://cdn-icons-png.flaticon.com/512/98/98539.png" alt="caravana Icono"
+                     title="Caravana Icono"></td>
+            <td class="alta">7.25 €</td>
+            <td class="baja">5.75 €</td>
+            <td><input type="number" id="cantidadCaravana" name="cantidadCaravana" min="1" value="1" disabled></td>
+        </tr>
+        <tr class="concepto">
+            <td><input type="checkbox" id="incluirAutocaravana" name="incluirAutocaravana" onclick="habilitar(this)">
+            </td>
+            <td>Autocaravana</td>
+            <td><img
+                    src="https://www.creativefabrica.com/wp-content/uploads/2019/04/Camper-icon-by-marco.livolsi2014-4-580x386.jpg"
+                    alt="Autocaravana Icono" title="Autocaravana Icono"></td>
+            <td class="alta">14.5 €</td>
+            <td class="baja">8.5 €</td>
+            <td><input type="number" id="cantidadAutocaravana" name="cantidadAutocaravana" min="1" value="1" disabled>
+            </td>
+        </tr>
+        <tr class="concepto">
+            <td><input type="checkbox" id="incluirTienda" name="incluirTienda" onclick="habilitar(this)"></td>
+            <td>Tienda</td>
+            <td><img src="https://cdn1.iconfinder.com/data/icons/camping-147/64/Tent-512.png" alt="Tienda Icono"
+                     title="Tienda Icono"></td>
+            <td class="alta">7.25 €</td>
+            <td class="baja">5.75 €</td>
+            <td><input type="number" id="cantidadTienda" name="cantidadTienda" min="1" value="1" disabled></td>
+        </tr>
+        <tr class="concepto">
+            <td><input type="checkbox" id="incluirAutoCar" name="incluirAutocar" onclick="habilitar(this)"></td>
+            <td>Autocar</td>
+            <td><img
+                    src="https://media.istockphoto.com/vectors/bus-icon-logo-isolated-on-white-background-vector-id1177920519?k=20&m=1177920519&s=170667a&w=0&h=_w7f4xkPlfYr98UarVS6voA8WYvCFhgM685Ad2ufS50="
+                    alt="Autocar Icono" title="Autocar Icono"></td>
+            <td class="alta">18 €</td>
+            <td class="baja">16 €</td>
+            <td><input type="number" id="cantidadAutocar" name="cantidadAutocar" min="1" value="1" disabled></td>
+        </tr>
+        <tr class="concepto">
+            <td><input type="checkbox" id="incluirMoto" name="incluirMoto" onclick="habilitar(this)"></td>
+            <td>Moto</td>
+            <td><img
+                    src="https://previews.123rf.com/images/miceking/miceking1701/miceking170100358/69057782-motorbike-driver-icon.jpg"
+                    alt="Moto Icono" title="Moto Icono"></td>
+            <td class="alta">4 €</td>
+            <td class="baja">3 €</td>
+            <td><input type="number" id="cantidadMoto" name="cantidadMoto" min="1" value="1" disabled></td>
+        </tr>
+        <tr class="concepto">
+            <td><input type="checkbox" id="incluirElectricidad" name="incluirElectricidad" onclick="habilitar(this)">
+            </td>
+            <td>Electricidad</td>
+            <td><img src="https://icon-library.com/images/electrical-outlet-icon/electrical-outlet-icon-10.jpg"
+                     alt="Electricidad Icono" title="Electricidad Icono"></td>
+            <td class="alta">5 €</td>
+            <td class="baja">5 €</td>
+            <td><input type="number" id="cantidadElectricidad" name="cantidadElectricidad" value="1" readonly disabled>
+            </td>
+        </tr>
+        <tr class="concepto">
+            <td><input type="checkbox" id="incluirAgua" name="incluirAgua" onclick="habilitar(this)"></td>
+            <td>Agua</td>
+            <td><img
+                    src="https://image.shutterstock.com/image-vector/faucet-iconvector-illustration-flat-design-260nw-1628522119.jpg"
+                    alt="Desagüe Icono" title="Desagüe Icono"></td>
+            <td class="alta">3.5 €</td>
+            <td class="baja">3.5 €</td>
+            <td><input type="number" id="cantidadAgua" name="cantidadAgua" value="1" readonly disabled></td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    <label>Temporada: </label>
+    <input name="temporada" type="radio" value="1" checked>Alta
+    <input name="temporada" type="radio" value="0">Baja
+    <label>Días: </label>
+    <input type="number" id="cantidadDias" name="cantidadDias" min="1" value="1">
+    <label>Total a pagar: </label>
+    <input type="text" id="pagoTotal" name="pagoTotal" readonly>
+</section>
+
+<script>
+    document.body.addEventListener('change', function (e) {
+        analizarOpciones();
+    });
+</script>
+
+</body>
+</html>
